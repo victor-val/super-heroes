@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { SuperHeroesComponent } from './modules/heroes/pages/super-heroes/super-heroes.component';
+import { CreateSuperHeroeComponent } from './modules/heroes/pages/create-super-heroe/create-super-heroe.component';
 
-
+const routes: Routes = [
+  { path: '', component: SuperHeroesComponent },
+  { path: 'crear', component: CreateSuperHeroeComponent },
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
