@@ -1,1 +1,62 @@
-<p>tabla-super-heroes works!</p>
+<p-table
+  [value]="superHeroes"
+  [paginator]="true"
+  [rows]="5"
+  [showCurrentPageReport]="true"
+  [tableStyle]="{ 'min-width': '50rem' }"
+  dataKey="id"
+  selectionMode="single"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Nombre</th>
+      <th>Vuela</th>
+      <th>Disponible</th>
+      <th>Teléfono</th>
+      <th>Acciones</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-spHeroe>
+    <tr>
+      <td>{{ spHeroe.nombre }}</td>
+      <td>
+        <p-checkbox
+          [disabled]="true"
+          [(ngModel)]="spHeroe.vuela"
+          [binary]="true"
+        ></p-checkbox>
+      </td>
+      <td>
+        <p-checkbox
+          [disabled]="true"
+          [(ngModel)]="spHeroe.disponible"
+          [binary]="true"
+        ></p-checkbox>
+      </td>
+      <td>{{ spHeroe.telefono }}</td>
+      <td [ngClass]="'col-sticky  conditionally-sticked'">
+        <button
+          type="button"
+          pButton
+          icon="pi pi-eye"
+          pTooltip="Ver detalle"
+          style="margin-right: 4px"
+        ></button>
+        <button
+          type="button"
+          pButton
+          icon="pi pi-pencil"
+          pTooltip="Editar"
+          style="margin-right: 4px"
+        ></button>
+        <button
+          type="button"
+          pButton
+          icon="pi pi-trash"
+          pTooltip="Borrar"
+          style="margin-right: 4px"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

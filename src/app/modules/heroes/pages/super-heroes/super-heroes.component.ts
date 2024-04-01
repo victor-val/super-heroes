@@ -13,8 +13,10 @@ import { SuperHeroeService } from '../../services/super-heroe.service';
   styleUrl: './super-heroes.component.css',
 })
 export class SuperHeroesComponent implements OnInit {
+  superHeroes: SuperHero[] = [];
+
   ngOnInit() {
-    this.getSuperHeroes().subscribe((data) => console.log(data));
+    this.getSuperHeroes().subscribe((data) => (this.superHeroes = data));
   }
   constructor(private superheroService: SuperHeroeService) {}
 

@@ -7831,6 +7831,24 @@
         "hash": "sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ=="
       }
     },
+    "npm:primeicons": {
+      "type": "npm",
+      "name": "npm:primeicons",
+      "data": {
+        "version": "7.0.0",
+        "packageName": "primeicons",
+        "hash": "sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw=="
+      }
+    },
+    "npm:primeng": {
+      "type": "npm",
+      "name": "npm:primeng",
+      "data": {
+        "version": "17.12.0",
+        "packageName": "primeng",
+        "hash": "sha512-RxUkmHliMxal8g1jy6gVe5HkwQQWZRz0BkV//d91wKnk0LP7vNJTbVU58ihSL9gAn/XkPW3xaR4heX585ml5yg=="
+      }
+    },
     "npm:proc-log": {
       "type": "npm",
       "name": "npm:proc-log",
@@ -18515,6 +18533,38 @@
       {
         "source": "npm:pretty-format",
         "target": "npm:react-is",
+        "type": "static"
+      }
+    ],
+    "npm:primeng": [
+      {
+        "source": "npm:primeng",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "npm:primeng",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "npm:primeng",
+        "target": "npm:@angular/forms",
+        "type": "static"
+      },
+      {
+        "source": "npm:primeng",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "npm:primeng",
+        "target": "npm:zone.js",
+        "type": "static"
+      },
+      {
+        "source": "npm:primeng",
+        "target": "npm:tslib",
         "type": "static"
       }
     ],
