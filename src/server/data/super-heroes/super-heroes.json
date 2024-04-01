@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "nombre": "Spiderman",
+    "vuela": true,
+    "disponible": true,
+    "telefono": 902202122
+  },
+  {
+    "id": 2,
+    "nombre": "Batman",
+    "vuela": false,
+    "disponible": true,
+    "telefono": 666666768
+  },
+  {
+    "id": 3,
+    "nombre": "Hulk",
+    "vuela": false,
+    "disponible": false,
+    "telefono": 900900900
+  },
+  {
+    "id": 4,
+    "nombre": "Thor",
+    "vuela": true,
+    "disponible": false,
+    "telefono": 700700700
+  },
+  {
+    "id": 5,
+    "nombre": "Flash",
+    "vuela": false,
+    "disponible": true,
+    "telefono": 901901901
+  },
+  {
+    "id": 6,
+    "nombre": "Capitan America",
+    "vuela": false,
+    "disponible": true,
+    "telefono": 902202122
+  },
+  {
+    "id": 7,
+    "nombre": "SuperLopez",
+    "vuela": true,
+    "disponible": true,
+    "telefono": 902202122
+  },
+  {
+    "id": 8,
+    "nombre": "Batwoman",
+    "vuela": false,
+    "disponible": true,
+    "telefono": 902202122
+  },
+  {
+    "id": 9,
+    "nombre": "Superwoman",
+    "vuela": true,
+    "disponible": true,
+    "telefono": 902202122
+  },
+  {
+    "id": 10,
+    "nombre": "Viuda negra",
+    "vuela": false,
+    "disponible": true,
+    "telefono": 902202122
+  },
+  {
+    "id": 11,
+    "nombre": "Iron man",
+    "vuela": true,
+    "disponible": true,
+    "telefono": 902202122
+  },
+  {
+    "id": 12,
+    "nombre": "Doctor Strange",
+    "vuela": false,
+    "disponible": true,
+    "telefono": 902202122
+  },
+  {
+    "id": 13,
+    "nombre": "Aqua man",
+    "vuela": false,
+    "disponible": true,
+    "telefono": 902202122
+  },
+  {
+    "id": 14,
+    "nombre": "Black Panther",
+    "vuela": false,
+    "disponible": false,
+    "telefono": 902202122
+  },
+  {
+    "id": 15,
+    "nombre": "Manolito el fuerte",
+    "vuela": true,
+    "disponible": true,
+    "telefono": 902202122
+  }
+]

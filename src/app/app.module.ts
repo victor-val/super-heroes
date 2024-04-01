@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { SuperHeroesComponent } from './modules/heroes/pages/super-heroes/super-heroes.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +16,7 @@ import { SuperHeroesComponent } from './modules/heroes/pages/super-heroes/super-
     BrowserAnimationsModule,
     SuperHeroesComponent,
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

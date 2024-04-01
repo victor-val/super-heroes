@@ -10,6 +10,7 @@
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
+    "concurrently": "^8.2.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2",
@@ -26,11 +27,13 @@
     "@typescript-eslint/parser": "7.2.0",
     "eslint": "^8.57.0",
     "jasmine-core": "~5.1.0",
+    "json-server": "^0.17.3",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "nodemon": "^3.1.0",
     "typescript": "~5.2.2"
   },
   "pathMappings": {},
@@ -72,15 +75,15 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "10122114393786504039"
+        "hash": "13314490271580062502"
       },
       {
         "file": "package.json",
-        "hash": "3860071370734449742"
+        "hash": "9409440595078736051"
       },
       {
         "file": "src/app/app-routing.module.ts",
-        "hash": "16571059082279789319"
+        "hash": "13210131124259730493"
       },
       {
         "file": "src/app/app.component.css",
@@ -88,7 +91,7 @@
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "6880513722212066549"
+        "hash": "17816966185630879015"
       },
       {
         "file": "src/app/app.component.spec.ts",
@@ -96,15 +99,75 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "5720587738507105388"
+        "hash": "933859402144874626"
       },
       {
-        "file": "src/app/app.config.ts",
-        "hash": "5428614352870646528"
+        "file": "src/app/app.module.ts",
+        "hash": "4414408542527360324"
       },
       {
-        "file": "src/app/app.routes.ts",
-        "hash": "12397496131277534773"
+        "file": "src/app/modules/heroes/components/filtro-busqueda-super-heroes/filtro-busqueda-super-heroes.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/heroes/components/filtro-busqueda-super-heroes/filtro-busqueda-super-heroes.component.html",
+        "hash": "9015026060574087128"
+      },
+      {
+        "file": "src/app/modules/heroes/components/filtro-busqueda-super-heroes/filtro-busqueda-super-heroes.component.spec.ts",
+        "hash": "5203551016918167699"
+      },
+      {
+        "file": "src/app/modules/heroes/components/filtro-busqueda-super-heroes/filtro-busqueda-super-heroes.component.ts",
+        "hash": "10462392798901802882"
+      },
+      {
+        "file": "src/app/modules/heroes/components/tabla-super-heroes/tabla-super-heroes.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/heroes/components/tabla-super-heroes/tabla-super-heroes.component.html",
+        "hash": "11896532341783508753"
+      },
+      {
+        "file": "src/app/modules/heroes/components/tabla-super-heroes/tabla-super-heroes.component.spec.ts",
+        "hash": "4472586154651186414"
+      },
+      {
+        "file": "src/app/modules/heroes/components/tabla-super-heroes/tabla-super-heroes.component.ts",
+        "hash": "11746801033797649001"
+      },
+      {
+        "file": "src/app/modules/heroes/pages/create-super-heroe/create-super-heroe.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/heroes/pages/create-super-heroe/create-super-heroe.component.html",
+        "hash": "13088340003131595225"
+      },
+      {
+        "file": "src/app/modules/heroes/pages/create-super-heroe/create-super-heroe.component.spec.ts",
+        "hash": "2694231221733381136"
+      },
+      {
+        "file": "src/app/modules/heroes/pages/create-super-heroe/create-super-heroe.component.ts",
+        "hash": "5864040664425670921"
+      },
+      {
+        "file": "src/app/modules/heroes/pages/super-heroes/super-heroes.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/heroes/pages/super-heroes/super-heroes.component.html",
+        "hash": "14739668190058321803"
+      },
+      {
+        "file": "src/app/modules/heroes/pages/super-heroes/super-heroes.component.spec.ts",
+        "hash": "11734284301673049688"
+      },
+      {
+        "file": "src/app/modules/heroes/pages/super-heroes/super-heroes.component.ts",
+        "hash": "14723508868584820506"
       },
       {
         "file": "src/assets/.gitkeep",
@@ -120,7 +183,19 @@
       },
       {
         "file": "src/main.ts",
-        "hash": "4927504514031276065"
+        "hash": "10137142524071521338"
+      },
+      {
+        "file": "src/server/data/super-heroes/index.js",
+        "hash": "8772340606072387755"
+      },
+      {
+        "file": "src/server/data/super-heroes/super-heroes.json",
+        "hash": "11972793974640824343"
+      },
+      {
+        "file": "src/server/server.js",
+        "hash": "7821229988276702679"
       },
       {
         "file": "src/styles.css",
