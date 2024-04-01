@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { SuperHeroesComponent } from './modules/heroes/pages/super-heroes/super-heroes.component';
-import { provideHttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { SpinnerInterceptorService } from './modules/heroes/interceptors/spinner.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,14 @@ import { provideHttpClient } from '@angular/common/http';
     BrowserAnimationsModule,
     SuperHeroesComponent,
   ],
-  providers: [provideHttpClient()],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: SpinnerInterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -12,19 +12,24 @@ import {
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { TablaSuperHeroesComponent } from '../../components/tabla-super-heroes/tabla-super-heroes.component';
 import { SuperHero } from '../../interfaces/super-heroe.interface';
 import { SuperHeroeService } from '../../services/super-heroe.service';
 import { FilterHeroPipe } from '../../pipes/filter-hero.pipe';
+import { SpinnerHandlerService } from '../../services/spinner-handler.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-super-heroes',
   standalone: true,
   imports: [
+    CommonModule,
     TablaSuperHeroesComponent,
     FormsModule,
     InputTextModule,
     ButtonModule,
+    ProgressSpinnerModule,
     FilterHeroPipe,
   ],
   templateUrl: './super-heroes.component.html',
@@ -36,8 +41,14 @@ export class SuperHeroesComponent implements OnInit {
   @ViewChild('superHeroeSearchInput', { static: true })
   superHeroeSearchInput!: ElementRef;
   superHeroeSuscription!: Subscription;
+  spinnerActive: boolean = true;
 
-  constructor(private superheroService: SuperHeroeService) {}
+  constructor(
+    private superheroService: SuperHeroeService,
+    public spinnerHandler: SpinnerHandlerService
+  ) {
+    this.spinnerHandler.showSpinner.subscribe(this.showSpinner.bind(this));
+  }
 
   ngOnInit() {
     this.getSuperHeroes().subscribe((data) => (this.superHeroes = data));
@@ -69,4 +80,8 @@ export class SuperHeroesComponent implements OnInit {
   }
 
   addHeroe() {}
+
+  showSpinner = (state: boolean): void => {
+    this.spinnerActive = state;
+  };
 }
