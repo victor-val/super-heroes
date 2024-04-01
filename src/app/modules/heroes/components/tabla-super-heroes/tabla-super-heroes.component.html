@@ -18,7 +18,7 @@
   </ng-template>
   <ng-template pTemplate="body" let-spHeroe>
     <tr>
-      <td>{{ spHeroe.nombre }}</td>
+      <td>{{ spHeroe.nombre | capitalizeFirstLetter }}</td>
       <td>
         <p-checkbox
           [disabled]="true"

@@ -8,7 +8,7 @@
   },
   {
     "id": 2,
-    "nombre": "Batman",
+    "nombre": "batman",
     "vuela": false,
     "disponible": true,
     "telefono": 666666768

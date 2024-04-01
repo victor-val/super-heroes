@@ -6,6 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { FormsModule } from '@angular/forms';
+import { CapitalizeFirstLetterPipe } from '../../pipes/capitalize-first-letter.pipe';
 
 @Component({
   selector: 'app-tabla-super-heroes',
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     InputTextModule,
     ButtonModule,
     TableModule,
+    CapitalizeFirstLetterPipe
   ],
   templateUrl: './tabla-super-heroes.component.html',
   styleUrl: './tabla-super-heroes.component.css',
