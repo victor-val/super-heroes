@@ -11,6 +11,7 @@ import {
 } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 import { TablaSuperHeroesComponent } from '../../components/tabla-super-heroes/tabla-super-heroes.component';
 import { SuperHero } from '../../interfaces/super-heroe.interface';
 import { SuperHeroeService } from '../../services/super-heroe.service';
@@ -23,6 +24,7 @@ import { FilterHeroPipe } from '../../pipes/filter-hero.pipe';
     TablaSuperHeroesComponent,
     FormsModule,
     InputTextModule,
+    ButtonModule,
     FilterHeroPipe,
   ],
   templateUrl: './super-heroes.component.html',
@@ -65,4 +67,6 @@ export class SuperHeroesComponent implements OnInit {
   getSuperHeroes(): Observable<SuperHero[]> {
     return this.superheroService.getSuperHeroes();
   }
+
+  addHeroe() {}
 }

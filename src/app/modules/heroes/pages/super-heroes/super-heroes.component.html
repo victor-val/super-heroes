@@ -1,17 +1,30 @@
-<h1>Super heroes</h1>
-<div class="busqueda">
-  <span class="p-input-icon-left">
-    <i class="pi pi-search"></i>
-    <input
-      #superHeroeSearchInput
-      type="text"
-      pInputText
-      [(ngModel)]="nombreBusqueda"
-      class="p-inputtext-lg"
-      placeholder="Superheroe a buscar"
-    />
-  </span>
+<div class="container">
+  <h1>Super heroes</h1>
+  <div class="busqueda">
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input
+        #superHeroeSearchInput
+        type="text"
+        pInputText
+        [(ngModel)]="nombreBusqueda"
+        class="p-inputtext-lg"
+        placeholder="Superheroe a buscar"
+      />
+    </span>
+  </div>
+  <div class="anadir">
+    <button
+      type="button"
+      pButton
+      icon="pi pi-plus"
+      (click)="addHeroe()"
+      pTooltip="Añadir"
+    >
+      Añadir
+    </button>
+  </div>
+  <app-tabla-super-heroes
+    [superHeroes]="superHeroes | filterHeroPipe : nombreBusqueda"
+  ></app-tabla-super-heroes>
 </div>
-<app-tabla-super-heroes
-  [superHeroes]="superHeroes | filterHeroPipe : nombreBusqueda"
-></app-tabla-super-heroes>
