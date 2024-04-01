@@ -1,3 +1,16 @@
 <h1>Super heroes</h1>
-<app-filtro-busqueda-super-heroes></app-filtro-busqueda-super-heroes>
-<app-tabla-super-heroes [superHeroes]="superHeroes"></app-tabla-super-heroes>
+<div class="busqueda">
+  <span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input
+      #superHeroeSearchInput
+      type="text"
+      pInputText
+      class="p-inputtext-lg"
+      placeholder="Superheroe a buscar"
+    />
+  </span>
+</div>
+<app-tabla-super-heroes
+  [superHeroes]="superHeroes | filterHeroPipe : nombreBusqueda"
+></app-tabla-super-heroes>
