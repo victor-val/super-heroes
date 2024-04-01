@@ -55,10 +55,7 @@ export class SuperHeroesComponent implements OnInit {
         ),
         debounceTime(500),
         distinct(),
-        switchMap((searchTerm: string) => {
-          this.nombreBusqueda = searchTerm;
-          return this.getSuperHeroes();
-        })
+        switchMap(() => this.getSuperHeroes())
       )
       .subscribe((superHeroes: SuperHero[]) => {
         this.superHeroes = superHeroes !== undefined ? superHeroes : [];
