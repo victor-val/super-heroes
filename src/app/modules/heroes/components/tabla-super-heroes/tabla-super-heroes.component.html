@@ -40,14 +40,13 @@
           pButton
           icon="pi pi-pencil"
           pTooltip="Editar"
-          style="margin-right: 4px"
+          [routerLink]="['/editar-heroe', spHeroe.id]"
         ></button>
         <button
           type="button"
           pButton
           icon="pi pi-trash"
           pTooltip="Borrar"
-          style="margin-right: 4px"
         ></button>
       </td>
     </tr>
