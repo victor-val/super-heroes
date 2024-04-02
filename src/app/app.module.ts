@@ -10,7 +10,7 @@ import {
   provideHttpClient,
   withInterceptorsFromDi,
 } from '@angular/common/http';
-import { SpinnerInterceptorService } from './modules/heroes/interceptors/spinner.interceptor';
+import { SpinnerInterceptorService } from './shared/interceptors/spinner.interceptor';
 
 @NgModule({
   declarations: [AppComponent],

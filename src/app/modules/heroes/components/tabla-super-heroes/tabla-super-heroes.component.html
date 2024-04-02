@@ -53,35 +53,3 @@
     </tr>
   </ng-template>
 </p-table>
-
-
-<p-dialog
-  header="Confirmación"
-  [(visible)]="displayConfirmacionBorrado"
-  [modal]="true"
-  class="ui-dialog-grid"
->
-    <p>¿Confirma que desea borrar el super heroe?</p>
-    <div class="ui-dialog-buttonpanel ui-widget-content ui-helper-clearfix">
-        <div class="botonera">
-            <button
-                label="Aceptar"
-                type="button"
-                class="ui-button"
-                icon="fa fa-check"
-                pButton
-                (click)="confirmacionBorrarSuperHeroe()"
-            >
-            </button>
-            <button
-                label="Cancelar"
-                type="button"
-                class="ui-button cancelar"
-                icon="fa fa-times"
-                pButton
-                (click)="cancelar()"
-            >
-            </button>
-        </div>
-    </div>
-</p-dialog>

@@ -1,0 +1,23 @@
+<div class="dialog">
+  <p>{{ title }}</p>
+  <div class="ui-dialog-buttonpanel ui-widget-content ui-helper-clearfix">
+    <div class="botonera">
+      <button
+        label="Aceptar"
+        type="button"
+        class="ui-button"
+        icon="fa fa-check"
+        pButton
+        (click)="aceptar()"
+      ></button>
+      <button
+        label="Cancelar"
+        type="button"
+        class="ui-button cancelar"
+        icon="fa fa-times"
+        pButton
+        (click)="cancelar()"
+      ></button>
+    </div>
+  </div>
+</div>

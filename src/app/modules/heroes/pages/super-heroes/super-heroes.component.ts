@@ -1,4 +1,10 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import {
   Observable,
   Subscription,
@@ -21,7 +27,7 @@ import { TablaSuperHeroesComponent } from '../../components/tabla-super-heroes/t
 import { SuperHero } from '../../interfaces/super-heroe.interface';
 import { SuperHeroeService } from '../../services/super-heroe.service';
 import { FilterHeroPipe } from '../../pipes/filter-hero.pipe';
-import { SpinnerHandlerService } from '../../services/spinner-handler.service';
+import { SpinnerHandlerService } from '../../../../shared/services/spinner-handler.service';
 
 @Component({
   selector: 'app-super-heroes',

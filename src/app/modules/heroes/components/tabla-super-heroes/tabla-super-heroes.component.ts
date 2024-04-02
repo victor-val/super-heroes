@@ -8,9 +8,11 @@ import { DialogModule } from 'primeng/dialog';
 import { TableModule } from 'primeng/table';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { CapitalizeFirstLetterPipe } from '../../pipes/capitalize-first-letter.pipe';
+import { CapitalizeFirstLetterPipe } from '../../../../shared/pipes/capitalize-first-letter.pipe';
 import { SuperHeroeService } from '../../services/super-heroe.service';
 import { MessageService } from 'primeng/api';
+import { DialogComponent } from '../../../../shared/components/dialog/dialog.component';
+import { DialogService } from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-tabla-super-heroes',
@@ -28,6 +30,7 @@ import { MessageService } from 'primeng/api';
   ],
   templateUrl: './tabla-super-heroes.component.html',
   styleUrl: './tabla-super-heroes.component.css',
+  providers: [DialogService],
 })
 export class TablaSuperHeroesComponent {
   @Input() superHeroes!: SuperHero[];
@@ -38,11 +41,25 @@ export class TablaSuperHeroesComponent {
 
   constructor(
     private superHeroesService: SuperHeroeService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private dialogService: DialogService
   ) {}
 
   eliminar(id: number): void {
     this.idSeleccionado = id;
+    const ref = this.dialogService.open(DialogComponent, {
+      header: 'Confirmación',
+      width: '25vw',
+      data: {
+        title: '¿Confirma que desea borrar el super heroe?',
+      },
+    });
+
+    ref.onClose.subscribe((nextStep: boolean) => {
+      if (nextStep) {
+        this.confirmacionBorrarSuperHeroe();
+      }
+    });
     this.displayConfirmacionBorrado = true;
   }
 
@@ -60,9 +77,5 @@ export class TablaSuperHeroesComponent {
         }
         this.update.emit();
       });
-  }
-
-  cancelar() {
-    this.displayConfirmacionBorrado = false;
   }
 }
