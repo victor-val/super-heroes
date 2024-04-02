@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import {
   Observable,
   Subscription,
@@ -41,7 +41,7 @@ import { SpinnerHandlerService } from '../../services/spinner-handler.service';
   styleUrl: './super-heroes.component.css',
   providers: [MessageService],
 })
-export class SuperHeroesComponent implements OnInit {
+export class SuperHeroesComponent implements OnInit, OnDestroy {
   superHeroes: SuperHero[] = [];
   nombreBusqueda!: string;
   @ViewChild('superHeroeSearchInput', { static: true })
@@ -89,7 +89,11 @@ export class SuperHeroesComponent implements OnInit {
     this.spinnerActive = state;
   };
 
-  update() {
+  update(): void {
     this.getSuperHeroes().subscribe((data) => (this.superHeroes = data));
+  }
+
+  ngOnDestroy(): void {
+    this.superHeroeSuscription.unsubscribe();
   }
 }
