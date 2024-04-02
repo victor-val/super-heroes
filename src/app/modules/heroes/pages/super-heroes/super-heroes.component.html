@@ -35,5 +35,6 @@
   </div>
   <app-tabla-super-heroes
     [superHeroes]="superHeroes | filterHeroPipe : nombreBusqueda"
+    (update)="update()"
   ></app-tabla-super-heroes>
 </div>

@@ -88,4 +88,8 @@ export class SuperHeroesComponent implements OnInit {
   showSpinner = (state: boolean): void => {
     this.spinnerActive = state;
   };
+
+  update() {
+    this.getSuperHeroes().subscribe((data) => (this.superHeroes = data));
+  }
 }

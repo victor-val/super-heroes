@@ -32,4 +32,8 @@ export class SuperHeroeService {
       superHero
     );
   }
+  
+  deleteSuperHeroe(id: number): Observable<SuperHero> {
+    return this.http.delete<SuperHero>(this.URL + '/superHeroes/' + id);
+  }
 }
