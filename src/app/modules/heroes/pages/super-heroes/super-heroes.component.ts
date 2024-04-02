@@ -11,6 +11,9 @@ import {
 } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MessageService } from 'primeng/api';
+import { MessagesModule } from 'primeng/messages';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
@@ -19,7 +22,6 @@ import { SuperHero } from '../../interfaces/super-heroe.interface';
 import { SuperHeroeService } from '../../services/super-heroe.service';
 import { FilterHeroPipe } from '../../pipes/filter-hero.pipe';
 import { SpinnerHandlerService } from '../../services/spinner-handler.service';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-super-heroes',
@@ -33,9 +35,11 @@ import { CommonModule } from '@angular/common';
     ProgressSpinnerModule,
     FilterHeroPipe,
     RouterLink,
+    MessagesModule,
   ],
   templateUrl: './super-heroes.component.html',
   styleUrl: './super-heroes.component.css',
+  providers: [MessageService],
 })
 export class SuperHeroesComponent implements OnInit {
   superHeroes: SuperHero[] = [];

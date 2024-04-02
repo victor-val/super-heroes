@@ -11,11 +11,13 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { MessagesModule } from 'primeng/messages';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { RouterLink } from '@angular/router';
 import { SuperHero } from '../../interfaces/super-heroe.interface';
 import { SuperHeroeService } from '../../services/super-heroe.service';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-create-super-heroe',
@@ -28,10 +30,12 @@ import { SuperHeroeService } from '../../services/super-heroe.service';
     ButtonModule,
     CheckboxModule,
     InputNumberModule,
+    MessagesModule,
     RouterLink,
   ],
   templateUrl: './create-super-heroe.component.html',
   styleUrl: './create-super-heroe.component.css',
+  providers: [MessageService],
 })
 export class CreateSuperHeroeComponent implements OnInit, OnDestroy {
   frm!: FormGroup;
@@ -41,7 +45,8 @@ export class CreateSuperHeroeComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private superHeroeService: SuperHeroeService
+    private superHeroeService: SuperHeroeService,
+    private messageService: MessageService
   ) {}
 
   ngOnInit(): void {
@@ -51,11 +56,21 @@ export class CreateSuperHeroeComponent implements OnInit, OnDestroy {
       if (isNaN(id)) {
         this.nuevo = true;
       } else {
-        this.nuevo = false;
-        this.superHeroeService.getSuperHeroe(id).subscribe((superHeroe) => {
-          this.superHeroSel = superHeroe;
-          this.createFormGroup();
-        });
+        this.superHeroeService.getSuperHeroe(id).subscribe(
+          (superHeroe) => {
+            this.nuevo = false;
+            this.superHeroSel = superHeroe;
+            this.createFormGroup();
+          },
+          (err) => {
+            this.nuevo = true;
+            this.messageService.add({
+              severity: 'error',
+              summary: 'Error',
+              detail: 'No existe el superHeroe',
+            });
+          }
+        );
       }
     });
   }
@@ -87,8 +102,11 @@ export class CreateSuperHeroeComponent implements OnInit, OnDestroy {
     const sp: SuperHero = { id, nombre, vuela, disponible, telefono };
     this.superHeroeService.insertSuperHeroe(sp).subscribe((res) => {
       if (res) {
-        console.log(res);
-        //TODO notificacion
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Añadido',
+          detail: 'Super heroe añadido con éxito',
+        });
       }
     });
     this.clean();
@@ -103,10 +121,12 @@ export class CreateSuperHeroeComponent implements OnInit, OnDestroy {
       .updateSuperHeroe(this.superHeroSel)
       .subscribe((res) => {
         if (res) {
-          console.log(res);
-          //TODO notificacion
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Actualizado',
+            detail: 'Super heroe actualizado con éxito',
+          });
         }
-        //TODO volver ?
       });
   }
 

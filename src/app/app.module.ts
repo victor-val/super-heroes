@@ -5,7 +5,11 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { SuperHeroesComponent } from './modules/heroes/pages/super-heroes/super-heroes.component';
-import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  HTTP_INTERCEPTORS,
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { SpinnerInterceptorService } from './modules/heroes/interceptors/spinner.interceptor';
 
 @NgModule({
