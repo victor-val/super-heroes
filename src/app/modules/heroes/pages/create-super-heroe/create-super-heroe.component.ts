@@ -11,9 +11,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputNumberModule } from 'primeng/inputnumber';
-import { SuperHero } from '../../interfaces/super-heroe.interface';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { RouterLink } from '@angular/router';
+import { SuperHero } from '../../interfaces/super-heroe.interface';
 import { SuperHeroeService } from '../../services/super-heroe.service';
 
 @Component({
@@ -27,6 +28,7 @@ import { SuperHeroeService } from '../../services/super-heroe.service';
     ButtonModule,
     CheckboxModule,
     InputNumberModule,
+    RouterLink,
   ],
   templateUrl: './create-super-heroe.component.html',
   styleUrl: './create-super-heroe.component.css',
@@ -108,9 +110,6 @@ export class CreateSuperHeroeComponent implements OnInit, OnDestroy {
       });
   }
 
-  cancelar() {
-    this.clean();
-  }
   clean() {
     this.frm.reset();
   }
