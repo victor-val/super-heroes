@@ -20,7 +20,7 @@ import { SuperHeroeService } from '../../services/super-heroe.service';
 import { MessageService } from 'primeng/api';
 
 @Component({
-  selector: 'app-create-super-heroe',
+  selector: 'app-form-super-heroe',
   standalone: true,
   imports: [
     CommonModule,
@@ -33,11 +33,11 @@ import { MessageService } from 'primeng/api';
     MessagesModule,
     RouterLink,
   ],
-  templateUrl: './create-super-heroe.component.html',
-  styleUrl: './create-super-heroe.component.css',
+  templateUrl: './form-super-heroe.component.html',
+  styleUrl: './form-super-heroe.component.css',
   providers: [MessageService],
 })
-export class CreateSuperHeroeComponent implements OnInit, OnDestroy {
+export class FormSuperHeroeComponent implements OnInit, OnDestroy {
   frm!: FormGroup;
   superHeroSel!: SuperHero;
   nuevo: boolean = false;

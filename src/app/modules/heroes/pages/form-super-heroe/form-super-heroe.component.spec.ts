@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreateSuperHeroeComponent } from './create-super-heroe.component';
+import { CreateSuperHeroeComponent } from './form-super-heroe.component';
 
 describe('CreateSuperHeroeComponent', () => {
   let component: CreateSuperHeroeComponent;
@@ -8,10 +8,9 @@ describe('CreateSuperHeroeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CreateSuperHeroeComponent]
-    })
-    .compileComponents();
-    
+      imports: [CreateSuperHeroeComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(CreateSuperHeroeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
