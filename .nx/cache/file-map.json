@@ -53,7 +53,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "13044518069027839699"
+        "hash": "16719259363103108411"
       },
       {
         "file": ".vscode/extensions.json",
@@ -73,19 +73,19 @@
       },
       {
         "file": "angular.json",
-        "hash": "5159959489462083888"
+        "hash": "4791789661026574045"
       },
       {
         "file": "package-lock.json",
-        "hash": "13314490271580062502"
+        "hash": "14210759476819839904"
       },
       {
         "file": "package.json",
-        "hash": "9409440595078736051"
+        "hash": "2203375021223711647"
       },
       {
         "file": "src/app/app-routing.module.ts",
-        "hash": "13210131124259730493"
+        "hash": "13183764722701504047"
       },
       {
         "file": "src/app/app.component.css",
@@ -105,23 +105,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "4414408542527360324"
-      },
-      {
-        "file": "src/app/modules/heroes/components/filtro-busqueda-super-heroes/filtro-busqueda-super-heroes.component.css",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/modules/heroes/components/filtro-busqueda-super-heroes/filtro-busqueda-super-heroes.component.html",
-        "hash": "9015026060574087128"
-      },
-      {
-        "file": "src/app/modules/heroes/components/filtro-busqueda-super-heroes/filtro-busqueda-super-heroes.component.spec.ts",
-        "hash": "5203551016918167699"
-      },
-      {
-        "file": "src/app/modules/heroes/components/filtro-busqueda-super-heroes/filtro-busqueda-super-heroes.component.ts",
-        "hash": "10462392798901802882"
+        "hash": "9038630411691980155"
       },
       {
         "file": "src/app/modules/heroes/components/tabla-super-heroes/tabla-super-heroes.component.css",
@@ -129,7 +113,7 @@
       },
       {
         "file": "src/app/modules/heroes/components/tabla-super-heroes/tabla-super-heroes.component.html",
-        "hash": "11896532341783508753"
+        "hash": "2499271316046283474"
       },
       {
         "file": "src/app/modules/heroes/components/tabla-super-heroes/tabla-super-heroes.component.spec.ts",
@@ -137,15 +121,23 @@
       },
       {
         "file": "src/app/modules/heroes/components/tabla-super-heroes/tabla-super-heroes.component.ts",
-        "hash": "11746801033797649001"
+        "hash": "13429720487844802904"
+      },
+      {
+        "file": "src/app/modules/heroes/interceptors/spinner.interceptor.ts",
+        "hash": "17800013080332154986"
+      },
+      {
+        "file": "src/app/modules/heroes/interfaces/super-heroe.interface.ts",
+        "hash": "2001694102607219159"
       },
       {
         "file": "src/app/modules/heroes/pages/create-super-heroe/create-super-heroe.component.css",
-        "hash": "3244421341483603138"
+        "hash": "5403614562236421100"
       },
       {
         "file": "src/app/modules/heroes/pages/create-super-heroe/create-super-heroe.component.html",
-        "hash": "13088340003131595225"
+        "hash": "3681286651928000865"
       },
       {
         "file": "src/app/modules/heroes/pages/create-super-heroe/create-super-heroe.component.spec.ts",
@@ -153,15 +145,15 @@
       },
       {
         "file": "src/app/modules/heroes/pages/create-super-heroe/create-super-heroe.component.ts",
-        "hash": "5864040664425670921"
+        "hash": "3772881501865472383"
       },
       {
         "file": "src/app/modules/heroes/pages/super-heroes/super-heroes.component.css",
-        "hash": "3244421341483603138"
+        "hash": "5768076254600155651"
       },
       {
         "file": "src/app/modules/heroes/pages/super-heroes/super-heroes.component.html",
-        "hash": "14739668190058321803"
+        "hash": "17585998150727430467"
       },
       {
         "file": "src/app/modules/heroes/pages/super-heroes/super-heroes.component.spec.ts",
@@ -169,11 +161,51 @@
       },
       {
         "file": "src/app/modules/heroes/pages/super-heroes/super-heroes.component.ts",
-        "hash": "14723508868584820506"
+        "hash": "146002969183390334"
+      },
+      {
+        "file": "src/app/modules/heroes/pipes/capitalize-first-letter.pipe.spec.ts",
+        "hash": "15344501997133024745"
+      },
+      {
+        "file": "src/app/modules/heroes/pipes/capitalize-first-letter.pipe.ts",
+        "hash": "5850613199855365334"
+      },
+      {
+        "file": "src/app/modules/heroes/pipes/filter-hero.pipe.spec.ts",
+        "hash": "15828538805064768533"
+      },
+      {
+        "file": "src/app/modules/heroes/pipes/filter-hero.pipe.ts",
+        "hash": "4257473256787951597"
+      },
+      {
+        "file": "src/app/modules/heroes/services/spinner-handler.service.spec.ts",
+        "hash": "12180611936160014466"
+      },
+      {
+        "file": "src/app/modules/heroes/services/spinner-handler.service.ts",
+        "hash": "13177899503756232625"
+      },
+      {
+        "file": "src/app/modules/heroes/services/super-heroe.service.spec.ts",
+        "hash": "12500152633789425252"
+      },
+      {
+        "file": "src/app/modules/heroes/services/super-heroe.service.ts",
+        "hash": "15034253978162757926"
       },
       {
         "file": "src/assets/.gitkeep",
         "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/environments/environment.development.ts",
+        "hash": "6236440639412522022"
+      },
+      {
+        "file": "src/environments/environment.ts",
+        "hash": "6236440639412522022"
       },
       {
         "file": "src/favicon.ico",
@@ -189,19 +221,19 @@
       },
       {
         "file": "src/server/data/super-heroes/index.js",
-        "hash": "8772340606072387755"
+        "hash": "9230140630984066527"
       },
       {
         "file": "src/server/data/super-heroes/super-heroes.json",
-        "hash": "11972793974640824343"
+        "hash": "4747256555817096566"
       },
       {
         "file": "src/server/server.js",
-        "hash": "7821229988276702679"
+        "hash": "7580517828468428686"
       },
       {
         "file": "src/styles.css",
-        "hash": "5195668842064076916"
+        "hash": "4261796221233333733"
       },
       {
         "file": "tsconfig.app.json",

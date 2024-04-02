@@ -17,4 +17,19 @@ export class SuperHeroeService {
   getSuperHeroes(): Observable<SuperHero[]> {
     return this.http.get<SuperHero[]>(this.URL + '/superHeroes');
   }
+
+  getSuperHeroe(id: number): Observable<SuperHero> {
+    return this.http.get<SuperHero>(this.URL + '/superHeroes/' + id);
+  }
+
+  insertSuperHeroe(superHero: SuperHero): Observable<SuperHero> {
+    return this.http.post<SuperHero>(this.URL + '/superHeroes/', superHero);
+  }
+
+  updateSuperHeroe(superHero: SuperHero): Observable<SuperHero> {
+    return this.http.patch<SuperHero>(
+      this.URL + '/superHeroes/' + superHero.id,
+      superHero
+    );
+  }
 }

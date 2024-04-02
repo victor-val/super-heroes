@@ -1,1 +1,40 @@
-<p>create-super-heroe works!</p>
+<div class="form-superheroe">
+  <form [formGroup]="frm">
+    <p>{{ nuevo ? "Insertar " : "Actualizar " }} superheroe:</p>
+    <div>
+      <label for="nombre">Nombre (*)</label>
+      <input type="text" pInputText formControlName="nombre" />
+    </div>
+    <div>
+      <label for="vuela">Vuela</label>
+      <p-checkbox formControlName="vuela" [binary]="true"></p-checkbox>
+    </div>
+    <div>
+      <label for="disponible">Disponible</label>
+      <p-checkbox formControlName="disponible" [binary]="true"></p-checkbox>
+    </div>
+    <div>
+      <label for="nombre">Telefono</label>
+      <p-inputNumber
+        formControlName="telefono"
+        inputId="telefono"
+        [useGrouping]="false"
+      >
+      </p-inputNumber>
+    </div>
+
+    <button
+      pButton
+      class="p-button-info"
+      [label]="nuevo ? 'Insertar' : 'Actualizar'"
+      (click)="nuevo ? insertar() : actualizar()"
+      [disabled]="!frm.valid"
+    ></button>
+    <button
+      pButton
+      class="p-button-info cancelar"
+      label="Cancelar"
+      (click)="cancelar()"
+    ></button>
+  </form>
+</div>

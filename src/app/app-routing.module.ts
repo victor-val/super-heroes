@@ -5,7 +5,8 @@ import { CreateSuperHeroeComponent } from './modules/heroes/pages/create-super-h
 
 const routes: Routes = [
   { path: '', component: SuperHeroesComponent },
-  { path: 'crear', component: CreateSuperHeroeComponent },
+  { path: 'crear-heroe', component: CreateSuperHeroeComponent },
+  { path: 'editar-heroe/:id', component: CreateSuperHeroeComponent },
 ];
 
 @NgModule({

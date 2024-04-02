@@ -10,6 +10,7 @@ import {
   switchMap,
 } from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
@@ -31,6 +32,7 @@ import { CommonModule } from '@angular/common';
     ButtonModule,
     ProgressSpinnerModule,
     FilterHeroPipe,
+    RouterLink,
   ],
   templateUrl: './super-heroes.component.html',
   styleUrl: './super-heroes.component.css',
@@ -78,8 +80,6 @@ export class SuperHeroesComponent implements OnInit {
   getSuperHeroes(): Observable<SuperHero[]> {
     return this.superheroService.getSuperHeroes();
   }
-
-  addHeroe() {}
 
   showSpinner = (state: boolean): void => {
     this.spinnerActive = state;
